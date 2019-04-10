@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="1.0.0">
+    <entity name="Member" representedClassName="Member" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="memberID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="team" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Team" inverseName="members" inverseEntity="Team" syncable="YES"/>
+    </entity>
+    <entity name="PhoneDevice" representedClassName="PhoneDevice" syncable="YES" codeGenerationType="class">
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Team" representedClassName="Team" syncable="YES">
+        <attribute name="access" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="countDown" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="members" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Member" inverseName="team" inverseEntity="Member" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Member" positionX="-164" positionY="-27" width="128" height="133"/>
+        <element name="PhoneDevice" positionX="-585" positionY="27" width="128" height="60"/>
+        <element name="Team" positionX="-344" positionY="-10" width="128" height="148"/>
+    </elements>
+</model>
