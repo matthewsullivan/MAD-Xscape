@@ -66,7 +66,7 @@
     self.leaders = [[NSMutableArray alloc] init];
 }
 
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     Team *team = [Teams currentRegisteredTeam];
@@ -241,13 +241,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIdentifier = @"MADCustomCell";
     
-    // Similar to UITableViewCell, but
     LeaderBoardCell *cell = (LeaderBoardCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
-        
         cell = [[LeaderBoardCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        
     }
     
     Leaderboard *leader = self.leaders[indexPath.row];
@@ -265,7 +262,7 @@
     return 64.0f;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

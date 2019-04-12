@@ -66,7 +66,7 @@
     return YES;
 }
 
-- (void)askPermisionForRemoteNotifications{
+- (void)askPermisionForRemoteNotifications {
     UIUserNotificationType types = UIUserNotificationTypeBadge |
     UIUserNotificationTypeSound |
     UIUserNotificationTypeAlert;
@@ -92,7 +92,7 @@
     self.firstLoad = FALSE;
 }
 
-- (void)startServiceApnsRegistration{
+- (void)startServiceApnsRegistration {
     Team *team = [Teams currentRegisteredTeam];
     
     [ServiceConnect startServiceConnection:3 :team.access andCallback:^(NSDictionary* result){

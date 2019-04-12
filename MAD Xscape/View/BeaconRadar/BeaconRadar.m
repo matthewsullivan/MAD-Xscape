@@ -150,7 +150,7 @@
     }
 }
 
-- (void)startRadar{
+- (void)startRadar {
     [self animateGauges];
     
     self.timer = [NSTimer timerWithTimeInterval:1.5/60.0
@@ -312,7 +312,7 @@
      */
 }
 
-- (void)tick:(NSTimer*)sender{
+- (void)tick:(NSTimer*)sender {
     self.hand.transform = CGAffineTransformRotate(self.hand.transform, M_PI * 0.01);
     
     float angle = [[self.hand.layer valueForKeyPath:@"transform.rotation.z"] floatValue];
@@ -355,7 +355,7 @@
     [line performSelector:@selector(removeFromSuperlayer) withObject:nil afterDelay:0.5];
 }
 
-- (void)createGridSheet{
+- (void)createGridSheet {
     UIBezierPath *path = [UIBezierPath bezierPath];
     
     float size = 32;

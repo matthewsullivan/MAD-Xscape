@@ -10,7 +10,7 @@
 
 @implementation ViewFX
 
-+ (void)applyTiltEffectTo: (UIView *)view{
++ (void)applyTiltEffectTo: (UIView *)view {
     UIInterpolatingMotionEffect *verticalMotionEffect =
     [[UIInterpolatingMotionEffect alloc]
      initWithKeyPath:@"center.y"
@@ -33,7 +33,7 @@
     
 }
 
-+ (void)applyBlurEffectTo: (UIView *)view{
++ (void)applyBlurEffectTo: (UIView *)view {
     if (!UIAccessibilityIsReduceTransparencyEnabled()) {
         
         view.backgroundColor = [UIColor blackColor];
@@ -51,7 +51,7 @@
     }
 }
 
-+ (void)applyIncorrectPasswordShakeTo:(UIView *)view{
++ (void)applyIncorrectPasswordShakeTo:(UIView *)view {
     view.transform = CGAffineTransformMakeTranslation(20, 0);
     
     [UIView animateWithDuration:0.4 delay:0.0 usingSpringWithDamping:0.2 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -59,7 +59,7 @@
     } completion:nil];
 }
 
-+ (void)applyDropShadowOn : (UIView *)view{
++ (void)applyDropShadowOn : (UIView *)view {
     view.layer.shadowRadius = 3.0f;
     view.layer.shadowColor = [UIColor blackColor].CGColor;
     view.layer.shadowOffset = CGSizeMake(0.0f, 1.0f);

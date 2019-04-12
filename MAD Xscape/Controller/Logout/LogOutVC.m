@@ -20,9 +20,8 @@
     [super viewDidLoad];
 }
 
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:NO];
-    
     /**
      *  Remove the team and user information, then progrmatically change back to the MembersVC  which will force a re-login.
      *

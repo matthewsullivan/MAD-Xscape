@@ -45,7 +45,7 @@
     return teamObject;
 }
 
-+ (BOOL)addedTeamSuccessfully :(NSDictionary *)teams{
++ (BOOL)addedTeamSuccessfully :(NSDictionary *)teams {
     BOOL added = false;
     
     NSManagedObjectContext *context = nil;

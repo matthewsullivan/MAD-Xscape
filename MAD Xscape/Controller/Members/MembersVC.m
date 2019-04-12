@@ -62,7 +62,7 @@
 #pragma mark - View Controller Tear Down and Setup Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     /**
      * Members table configuration
      */
@@ -101,7 +101,7 @@
     }
 }
 
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     if (![Teams isTeamSaved]) {

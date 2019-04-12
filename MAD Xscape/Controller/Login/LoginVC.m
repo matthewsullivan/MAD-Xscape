@@ -145,7 +145,7 @@
 
 
 #pragma mark - TextField Delegates
-- (BOOL) textFieldShouldReturn:(UITextField *)textField{
+- (BOOL) textFieldShouldReturn:(UITextField *)textField {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = TRUE;
     
     UIActivityIndicatorView *indicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
@@ -232,6 +232,5 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 @end

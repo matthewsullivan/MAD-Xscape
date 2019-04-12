@@ -24,8 +24,7 @@
  and the string we want to post to the web service.
  We then sort through what request should be made (some are slightly different).
  */
-+ (void)startServiceConnection:(int)serviceKey :(NSString *)post andCallback:(void (^)(NSDictionary *))callback{
-    
++ (void)startServiceConnection:(int)serviceKey :(NSString *)post andCallback:(void (^)(NSDictionary *))callback {
     NSMutableData *responseData;
     NSMutableURLRequest *request;
     

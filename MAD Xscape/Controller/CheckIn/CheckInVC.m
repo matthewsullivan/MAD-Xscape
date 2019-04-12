@@ -101,11 +101,11 @@
     [appDelegate askPermisionForRemoteNotifications];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
 
-- (void)viewDidDisappear:(BOOL)animated{
+- (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     
     if(self.beaconRadar){
@@ -113,13 +113,13 @@
     }
 }
 
-- (void)viewDidAppear:(BOOL)animated{
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     [self updateTableCellInformation];
 }
 
-- (void)updateTableCellInformation{
+- (void)updateTableCellInformation {
     Team *team = [Teams currentRegisteredTeam];
     
     [ServiceConnect startServiceConnection:0 :team.access andCallback:^(NSDictionary* result){
@@ -208,7 +208,7 @@
     }];
 }
 
-- (void)memberInformation{
+- (void)memberInformation {
     /**
      * leader Information View
      */
@@ -340,7 +340,7 @@
 }
 
 
-- (void)checkIn :(UIButton *)sender{
+- (void)checkIn :(UIButton *)sender {
     Team *team = [Teams currentRegisteredTeam];
     
     self.errorLabel.text =  NSLocalizedString(@"* Checking In *", @"Checking In Message");
